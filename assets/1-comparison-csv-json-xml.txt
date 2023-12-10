@@ -1,0 +1,91 @@
+
+
+Different plain text data formats (CSV, JSON, XML)
+==================================================
+
+
+CSV = Comma Separated Values (doesn't have to be commas...)
+-----------------------------------------------------------
+
+Id,Name,Phone,DepartmentIds,Comments
+1,Jane Smith,02 9988 7766,1|2,
+2,John Blahface,02 9912 3412,3,"This guy is nuts, don't trust him!"
+
+
+
+JSON = JavaScript Object Notation
+---------------------------------
+
+/*
+	let blah = "string"
+	let blah = 123
+	let blah = true
+	let blah = null
+	let myArray = ["value 1", "value 2", "value 3"]
+	let myObject = {"property": "value", "anotherProperty": 123}
+*/
+
+[
+	{
+		"Id": 1,
+		"Name": "Jane Smith",
+		"Phone": "02 9988 7766",
+		"Departments": [
+			{
+				"Id": 1,
+				"Name": "Sales"
+			},
+			{
+				"Id": 2,
+				"Name": "Marketing"
+			}
+		],
+		"Comments": ""
+	},
+	{
+		"Id": 2,
+		"Name": "John Blahface",
+		"Phone": "02 9912 3412",
+		"Departments": [
+			{
+				"Id": 3,
+				"Name": "HR"
+			}
+		],
+		"Comments": "This guy is nuts, don't trust him!"
+	}
+]
+
+
+
+XML = eXtensible Markup Language
+---------------------------------
+
+You CAN combine XML with other technologies like schemas (eg XSD) to have powerful control.
+
+<People>
+	<Person Id="1">
+		<Name>Jane Smith</Name>
+		<Phone>02 9988 7766</Phone>
+		<Departments>
+			<Department Id="1">
+				<Name>Sales</Name>
+			</Department>
+			<Department Id="2">
+				<Name>Marketing</Name>
+			</Department>
+		</Departments>
+		<Comments></Comments>
+	</Person>
+	<Person Id="2">
+		<Name>John Blahface</Name>
+		<Phone>02 9912 3412</Phone>
+		<Departments>
+			<Department Id="3">
+				<Name>HR</Name>
+			</Department>
+		</Departments>
+		<Comments>This guy is nuts, don't trust him!</Comments>
+	</Person>
+</People>
+
